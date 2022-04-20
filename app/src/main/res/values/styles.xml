@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CampoTextoPurpura" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#CE93D8</item>
+        <item name="colorControlActivated">#AB47BC</item>
+        <item name="android:textColorHighlight">#E1BEE7</item>
+    </style>
+</resources>
