@@ -16,7 +16,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="635dp"
-        android:hint="Nombre"
+
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -29,10 +29,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:inputType="textPersonName"
+        <EditText
+            android:id="@+id/et_Nombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            android:contentDescription=""
+            />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -44,7 +47,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="546dp"
-        android:hint="Apellido"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -56,11 +58,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Nombre"
         app:startIconDrawable="@drawable/ic_persona">
-
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/et_Apellido"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName" />
+            android:hint="Apellido"
+            android:contentDescription=""/>
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -71,7 +75,6 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="457dp"
-        android:hint="Email"
         app:boxBackgroundMode="outline"
         app:boxCornerRadiusBottomEnd="10dp"
         app:boxCornerRadiusBottomStart="10dp"
@@ -84,10 +87,12 @@
         app:layout_constraintTop_toBottomOf="@+id/Apellido"
         app:startIconDrawable="@drawable/icmail">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/et_Email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:hint="Email"
+            android:contentDescription=""/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -110,12 +115,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Genero"
-        app:startIconDrawable="@drawable/ic_lock">
+        app:startIconDrawable="@drawable/ic_lock"
+        >
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/et_Password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:contentDescription=""
+            />
+
+
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -177,6 +188,21 @@
             android:inputType="none"/>
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/bt_Registrar"
+        android:layout_width="137dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="107dp"
+        android:layout_marginEnd="137dp"
+        android:layout_marginBottom="31dp"
+        android:text="Registrar"
+        android:backgroundTint="#FF886D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Password" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
