@@ -40,6 +40,7 @@ public class Registro extends AppCompatActivity {
     String email="";
     String password="";
 
+    //Autentificacion y base de datos
     FirebaseAuth mAuth;
     DatabaseReference mDatabase;
 
@@ -57,6 +58,7 @@ public class Registro extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        //Datos para Registrar y la Base de datos
         etName = (EditText) findViewById(R.id.et_Nombre);
         etApellido = (EditText) findViewById(R.id.et_Apellido);
         etEmail = (EditText) findViewById(R.id.et_Email);
@@ -101,6 +103,8 @@ public class Registro extends AppCompatActivity {
             }
         });
 
+        //Introducir los datos y la comprobacion para el Registro de Usuarios
+
         btRegistro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -110,27 +114,21 @@ public class Registro extends AppCompatActivity {
                 password = etPassword.getText().toString();
 
                 if(!name.isEmpty() && !apellido.isEmpty() && !email.isEmpty() && !password.isEmpty()){
-
                    if(password.length()>=6){
-
                        registerUser();
-
                    }else{
                        Toast.makeText(Registro.this, "El password debe tener al menos 6 caracteres", Toast.LENGTH_SHORT ).show();
                    }
-
                 }else{
                     Toast.makeText(Registro.this, "Debes completar los campos", Toast.LENGTH_SHORT ).show();
                 }
-
-
             }
         });
 
 
 
     }
-
+    //Registro y base de datos la cual guardara los valores de nuestros usuario en Firebase
     private void registerUser(){
 
         mAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
