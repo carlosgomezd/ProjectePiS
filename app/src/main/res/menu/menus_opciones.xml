@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Buscar Contactos"
+        android:id="@+id/buscar_contactos_menu"
+        app:showAsAction="never">
+    </item>
+
+    <item
+        android:title="Ayuda"
+        android:id="@+id/ayuda_menu"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:visible="true"
+        android:title="Cerrar sesion"
+        android:id="@+id/cerrar_sesion_menu"
+        app:showAsAction="never">
+    </item>
+
+</menu>

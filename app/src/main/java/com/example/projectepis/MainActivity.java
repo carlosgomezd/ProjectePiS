@@ -12,11 +12,13 @@ public class MainActivity extends AppCompatActivity {
 
 
     Button registrar;
+    Button signIn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        signIn = (Button) findViewById(R.id.Iniciar);
         registrar= (Button) findViewById(R.id.Registrar);
 
         registrar.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +27,16 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent registrar = new Intent(MainActivity.this,Registro.class);
                 startActivity(registrar);
+
+            }
+        });
+
+        signIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent signIn = new Intent(MainActivity.this,Chat.class);
+                startActivity(signIn);
 
             }
         });
