@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectePiS">
         <activity
-            android:name=".Chat"
+            android:name=".BuscarAmigosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GrupoChatActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".Registro"

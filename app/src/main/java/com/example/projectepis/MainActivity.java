@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent signIn = new Intent(MainActivity.this,Chat.class);
+                Intent signIn = new Intent(MainActivity.this, InicioChatActivity.class);
                 startActivity(signIn);
 
             }

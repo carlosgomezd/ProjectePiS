@@ -6,6 +6,13 @@
         android:title="Buscar Contactos"
         android:id="@+id/buscar_contactos_menu"
         app:showAsAction="never">
+
+    </item>
+
+    <item
+        android:title="Crear Grupo"
+        android:id="@+id/crear_grupo_menu"
+        app:showAsAction="never">
     </item>
 
     <item
@@ -13,6 +20,7 @@
         android:id="@+id/ayuda_menu"
         app:showAsAction="never">
     </item>
+
     <item
         android:visible="true"
         android:title="Cerrar sesion"
