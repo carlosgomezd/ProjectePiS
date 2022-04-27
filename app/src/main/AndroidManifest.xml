@@ -11,7 +11,7 @@
         android:theme="@style/Theme.ProjectePiS">
         <activity
             android:name=".BuscarAmigosActivity"
-            android:exported="false" />
+            android:parentActivityName=".InicioChatActivity"></activity>
         <activity
             android:name=".GrupoChatActivity"
             android:exported="false" />

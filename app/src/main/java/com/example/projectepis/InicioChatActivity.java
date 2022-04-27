@@ -67,6 +67,7 @@ public class InicioChatActivity extends AppCompatActivity {
 
         if(item.getItemId() == R.id.buscar_contactos_menu){
             Toast.makeText(this, "Buscar Amigos", Toast.LENGTH_SHORT).show();
+            BuscarAmigos();
         }
         if(item.getItemId() == R.id.crear_grupo_menu){
             CrearNuevoGrupo();
@@ -81,6 +82,11 @@ public class InicioChatActivity extends AppCompatActivity {
             finish();
         }
         return true;
+    }
+
+    private void BuscarAmigos() {
+        Intent intent = new Intent(InicioChatActivity.this, BuscarAmigosActivity.class);
+        startActivity(intent);
     }
 
     private void CrearNuevoGrupo() {
