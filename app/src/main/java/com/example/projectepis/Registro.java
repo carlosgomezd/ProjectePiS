@@ -32,6 +32,8 @@ public class Registro extends AppCompatActivity {
     EditText etApellido;
     EditText etEmail;
     EditText etPassword;
+    EditText etBirthday;
+    EditText etGenero;
     Button btRegistro;
 
     //Variables de datos que vamos a registrar
@@ -39,6 +41,8 @@ public class Registro extends AppCompatActivity {
     String apellido="";
     String email="";
     String password="";
+    String birthday="";
+    String gen="";
 
     //Autentificacion y base de datos
     FirebaseAuth mAuth;
@@ -63,7 +67,10 @@ public class Registro extends AppCompatActivity {
         etApellido = (EditText) findViewById(R.id.et_Apellido);
         etEmail = (EditText) findViewById(R.id.et_Email);
         etPassword = (EditText) findViewById(R.id.et_Password);
+        etBirthday=(EditText)findViewById(R.id.et_date);
+        etGenero=(EditText)findViewById(R.id.autoCompleteTextView);
         btRegistro = (Button) findViewById(R.id.bt_Registrar);
+
 
         //Crear array de genero
         String [] generos = new String[]{
@@ -112,6 +119,9 @@ public class Registro extends AppCompatActivity {
                 apellido = etApellido.getText().toString();
                 email = etEmail.getText().toString();
                 password = etPassword.getText().toString();
+                birthday=etBirthday.getText().toString();
+                gen=etGenero.getText().toString();
+
 
                 if(!name.isEmpty() && !apellido.isEmpty() && !email.isEmpty() && !password.isEmpty()){
                    if(password.length()>=6){
@@ -141,6 +151,8 @@ public class Registro extends AppCompatActivity {
                     map.put("apellido",apellido );
                     map.put("email",email );
                     map.put("password",password );
+                    map.put("genero",gen);
+                    map.put("birthday",birthday);
 
                     String id = mAuth.getCurrentUser().getUid();
 

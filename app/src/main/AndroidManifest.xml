@@ -19,6 +19,9 @@
             android:name=".InicioChatActivity"
             android:exported="false" />
         <activity
+            android:name=".Inicio"
+            android:exported="false" />
+        <activity
             android:name=".Registro"
             android:exported="false" />
         <activity
