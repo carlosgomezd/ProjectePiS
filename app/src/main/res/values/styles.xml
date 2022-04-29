@@ -5,4 +5,15 @@
         <item name="colorPrimaryDark">#AB47BC</item>
         <item name="colorAccent">#E1BEE7</item>
     </style>
+
+    <style name="ToolbarTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">#CE93D8</item>
+        <item name="colorPrimaryDark">#AB47BC</item>
+        <item name="colorAccent">#E1BEE7</item>
+        <item name="android:actionMenuTextColor">@color/black</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
 </resources>

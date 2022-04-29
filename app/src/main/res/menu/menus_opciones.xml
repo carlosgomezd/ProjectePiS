@@ -2,30 +2,37 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <item
         android:title="Buscar Contactos"
         android:id="@+id/buscar_contactos_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:iconTint="@color/black">
 
     </item>
+
 
     <item
         android:title="Crear Grupo"
         android:id="@+id/crear_grupo_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="200">
     </item>
 
     <item
         android:title="Ayuda"
         android:id="@+id/ayuda_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="300">
     </item>
 
     <item
         android:visible="true"
         android:title="Cerrar sesion"
         android:id="@+id/cerrar_sesion_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="400">
     </item>
 
 </menu>

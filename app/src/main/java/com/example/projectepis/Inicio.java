@@ -22,9 +22,12 @@ public class Inicio extends AppCompatActivity {
         cerrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                FirebaseAuth.getInstance().signOut();
-                Toast.makeText(Inicio.this, "Sesion cerrada", Toast.LENGTH_SHORT ).show();
-                gomain();
+                //FirebaseAuth.getInstance().signOut();
+                //Toast.makeText(Inicio.this, "Sesion cerrada", Toast.LENGTH_SHORT ).show();
+                //gomain();
+                Intent intent = new Intent(Inicio.this, InicioChatActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
 
@@ -32,9 +35,10 @@ public class Inicio extends AppCompatActivity {
     }
 
     private void gomain() {
-        Intent i = new Intent(Inicio.this,MainActivity.class);
+        Intent i = new Intent(Inicio.this, InicioChatActivity.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK );
         startActivity(i);
+        finish();
     }
 
 }
