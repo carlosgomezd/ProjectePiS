@@ -10,8 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectePiS">
         <activity
+            android:name=".SolicitudesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerAmigosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilUsuarioActivity"
+            android:exported="false" />
+        <activity
             android:name=".BuscarAmigosActivity"
-            android:parentActivityName=".InicioChatActivity"></activity>
+            android:parentActivityName=".InicioChatActivity" />
         <activity
             android:name=".GrupoChatActivity"
             android:exported="false" />

@@ -47,7 +47,7 @@ public class InicioChatActivity extends AppCompatActivity {
         mytabLayout = (TabLayout)findViewById(R.id.main_tabs);
         mytabLayout.setupWithViewPager(myviewPager);
 
-        UserRef = FirebaseDatabase.getInstance().getReference().child("Usuarios");
+        UserRef = FirebaseDatabase.getInstance().getReference().child("Users");
         RootRef = FirebaseDatabase.getInstance().getReference().child("Grupos");
         mAuth = FirebaseAuth.getInstance();
         CurrentUserId = mAuth.getCurrentUser().getUid();
@@ -69,6 +69,14 @@ public class InicioChatActivity extends AppCompatActivity {
             Toast.makeText(this, "Buscar Amigos", Toast.LENGTH_SHORT).show();
             BuscarAmigos();
         }
+        if(item.getItemId() == R.id.ver_contactos_menu){
+            Toast.makeText(this, "Ver Amigos", Toast.LENGTH_SHORT).show();
+            VerAmigos();
+        }
+        if(item.getItemId() == R.id.ver_solicitudes_menu){
+            Toast.makeText(this, "Ver Solicitudes de Amistad", Toast.LENGTH_SHORT).show();
+            VerSolicitudes();
+        }
         if(item.getItemId() == R.id.crear_grupo_menu){
             CrearNuevoGrupo();
         }
@@ -84,8 +92,17 @@ public class InicioChatActivity extends AppCompatActivity {
         return true;
     }
 
+    private void VerSolicitudes() {
+        Intent intent = new Intent(InicioChatActivity.this, SolicitudesActivity.class);
+        startActivity(intent);
+    }
+
     private void BuscarAmigos() {
         Intent intent = new Intent(InicioChatActivity.this, BuscarAmigosActivity.class);
+        startActivity(intent);
+    }
+    private void VerAmigos() {
+        Intent intent = new Intent(InicioChatActivity.this, VerAmigosActivity.class);
         startActivity(intent);
     }
 
