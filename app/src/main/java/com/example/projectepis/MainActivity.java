@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button registrar;
     Button signIn;
+    Button resetP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         signIn = (Button) findViewById(R.id.Iniciar);
         registrar= (Button) findViewById(R.id.Registrar);
+        resetP= (Button) findViewById(R.id.btRecuperacion);
 
 
         mAuth = FirebaseAuth.getInstance();
@@ -89,6 +91,16 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        resetP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent respass = new Intent(MainActivity.this,ResetPass.class);
+                startActivity(respass);
+            }
+        });
+
+
 
     }
     private void irinicio() {
