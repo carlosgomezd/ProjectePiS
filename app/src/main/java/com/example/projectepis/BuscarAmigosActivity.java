@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +19,7 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class BuscarAmigosActivity extends AppCompatActivity {
 
@@ -36,7 +38,6 @@ public class BuscarAmigosActivity extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.buscar_amigos_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Buscar Amigos");
     }
 
@@ -52,7 +53,19 @@ public class BuscarAmigosActivity extends AppCompatActivity {
 
                         holder.nombreu.setText(model.getNombre());
                         holder.apellidou.setText(model.getApellido());
-                       // Picasso.get().load(model.getImagen()).placeholder(R.drawable.error).into(holder.imageu);
+                        Picasso.get().load(model.getImagen()).placeholder(R.drawable.user).into(holder.imageu);
+
+                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String usuario_id = getRef(position).getKey();
+
+                                Intent intent = new Intent(BuscarAmigosActivity.this, PerfilUsuarioActivity.class);
+                                intent.putExtra("usuario_id", usuario_id);
+                                startActivity(intent);
+
+                            }
+                        });
                     }
 
                     @NonNull

@@ -2,30 +2,51 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+
     <item
-        android:title="Buscar Contactos"
+        android:title="Buscar Nuevos Contactos"
         android:id="@+id/buscar_contactos_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="100">
+
+    </item>
+
+    <item
+        android:title="Ver Contactos"
+        android:id="@+id/ver_contactos_menu"
+        app:showAsAction="never"
+        android:orderInCategory="200">
+
+    </item>
+
+    <item
+        android:title="Ver Solicitudes de Amistad"
+        android:id="@+id/ver_solicitudes_menu"
+        app:showAsAction="never"
+        android:orderInCategory="300">
 
     </item>
 
     <item
         android:title="Crear Grupo"
         android:id="@+id/crear_grupo_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="400">
     </item>
 
     <item
         android:title="Ayuda"
         android:id="@+id/ayuda_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="500">
     </item>
 
     <item
         android:visible="true"
         android:title="Cerrar sesion"
         android:id="@+id/cerrar_sesion_menu"
-        app:showAsAction="never">
+        app:showAsAction="never"
+        android:orderInCategory="600">
     </item>
 
 </menu>

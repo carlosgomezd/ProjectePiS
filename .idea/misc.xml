@@ -10,11 +10,21 @@
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.1" />
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_reset_pass.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/dropdown_genero.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_buscar_amigos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_birthday.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_genero.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_lock.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_persona.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/icmail.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_buscar_amigos.xml" value="0.33" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_chat.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_grupo_chat.xml" value="0.33" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_perfil_usuario.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_soilicitudes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_ver_amigos.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/dropdown_genero.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/fragment_chat.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/fragment_grupos.xml" value="0.36666666666666664" />
