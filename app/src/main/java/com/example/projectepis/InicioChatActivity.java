@@ -35,7 +35,7 @@ public class InicioChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chat);
+        setContentView(R.layout.activity_inicio_chat);
         toolbar=(Toolbar)findViewById(R.id.app_main_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("AnyDay");
@@ -84,10 +84,13 @@ public class InicioChatActivity extends AppCompatActivity {
             Toast.makeText(this, "Ayuda", Toast.LENGTH_SHORT).show();
         }
         if(item.getItemId() == R.id.cerrar_sesion_menu){
-            Toast.makeText(this, "Cerrar Sesion", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Cerrar Sesion", Toast.LENGTH_SHORT).show();
+
+            //finish();
+            FirebaseAuth.getInstance().signOut();
+            Toast.makeText(InicioChatActivity.this, "Sesion cerrada", Toast.LENGTH_SHORT ).show();
             Intent intent = new Intent(InicioChatActivity.this, MainActivity.class);
             startActivity(intent);
-            finish();
         }
         return true;
     }

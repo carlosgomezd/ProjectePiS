@@ -45,7 +45,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         usuario_imagen = (ImageView) findViewById(R.id.usuario_vic_imagen);
         enviarMensaje = (Button) findViewById(R.id.enviar_mensaje_usuario_vic);
         cancelarMensaje = (Button) findViewById(R.id.cancelar_mensaje_usuario_vic);
-        CurrentEstado = "nueva";
+        CurrentEstado = "nuevo";
 
         ObtenerInformacionDB();
     }
@@ -84,10 +84,10 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
                 if(snapshot.hasChild(usuario_recibido)){
                     String requerimiento = snapshot.child(usuario_recibido).child("tipo").getValue().toString();
                     if(requerimiento.equals("enviado")){
-                        CurrentEstado = "enviada";
+                        CurrentEstado = "enviado";
                         enviarMensaje.setText("CANCELAR SOLICITUD");
                     }else if(requerimiento.equals("recibido")){
-                        CurrentEstado = "recibida";
+                        CurrentEstado = "recibido";
                         enviarMensaje.setText("ACEPTAR SOLICITUD");
 
                         cancelarMensaje.setVisibility(View.VISIBLE);
@@ -127,13 +127,13 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     enviarMensaje.setEnabled(false);
-                    if(CurrentEstado.equals("nueva")){
+                    if(CurrentEstado.equals("nuevo")){
                         EnviarSolicitud();
                     }
-                    if (CurrentEstado.equals("enviada")){
+                    if (CurrentEstado.equals("enviado")){
                         CancelarSolicitud();
                     }
-                    if (CurrentEstado.equals("recibida")){
+                    if (CurrentEstado.equals("recibido")){
                         AceptarSolicitud();
                     }
                     if (CurrentEstado.equals("amigos")){

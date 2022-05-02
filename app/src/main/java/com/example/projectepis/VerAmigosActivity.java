@@ -39,7 +39,7 @@ public class VerAmigosActivity extends AppCompatActivity {
         ContactosRef = FirebaseDatabase.getInstance().getReference().child("Contactos").child(CurrentUserId);
         UserRef = FirebaseDatabase.getInstance().getReference().child("Users");
         ContactosList = (RecyclerView) findViewById(R.id.ver_amigos_recyclerView);
-        ContactosList.setLayoutManager(new LinearLayoutManager(this));
+        ContactosList.setLayoutManager(new LinearLayoutManager(VerAmigosActivity.this));
 
         toolbar = (Toolbar) findViewById(R.id.ver_amigos_toolbar);
         setSupportActionBar(toolbar);
