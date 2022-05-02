@@ -1,6 +1,7 @@
 package com.example.projectepis;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,15 +15,22 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ChatActivity extends AppCompatActivity {
@@ -34,6 +42,11 @@ public class ChatActivity extends AppCompatActivity {
     private DatabaseReference RootRef;
     private FirebaseAuth auth;
     private String EnviarUserId;
+
+    private final List<Mensajes> mensajesList = new ArrayList<>();
+    private LinearLayoutManager linearLayoutManager;
+    private MensajeAdapter mensajeAdapter;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +65,45 @@ public class ChatActivity extends AppCompatActivity {
         nombreUsuario.setText(nombre);
         apellidoUsuario.setText(apellido);
         Picasso.get().load(imagen).placeholder(R.drawable.user).into(imagenUsuario);
+
+        mensajeAdapter = new MensajeAdapter(mensajesList);
+        recyclerView =(RecyclerView) findViewById(R.id.listamensajesrecycler);
+        linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+        recyclerView.setAdapter(mensajeAdapter);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        RootRef.child("Mensajes").child(EnviarUserId).child(recibirUserId).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+                Mensajes mensajes = snapshot.getValue(Mensajes.class);
+                mensajesList.add(mensajes);
+                mensajeAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot snapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
     }
 
     private void IniciarLayout() {
