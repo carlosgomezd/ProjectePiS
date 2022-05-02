@@ -10,16 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectePiS">
         <activity
+            android:name=".ResetPass"
+            android:exported="false" />
+        <activity
             android:name=".ChatActivity"
             android:parentActivityName=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".SolicitudesActivity"
-            android:parentActivityName=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".VerAmigosActivity"
-            android:parentActivityName=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".PerfilUsuarioActivity"
@@ -29,7 +30,6 @@
             android:parentActivityName=".InicioChatActivity" />
         <activity
             android:name=".GrupoChatActivity"
-            android:parentActivityName=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".InicioChatActivity"
