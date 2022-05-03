@@ -18,9 +18,11 @@
             android:exported="false" />
         <activity
             android:name=".SolicitudesActivity"
+            android:parentActivityName=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".VerAmigosActivity"
+            android:parentActivityName=".InicioChatActivity"
             android:exported="false" />
         <activity
             android:name=".PerfilUsuarioActivity"

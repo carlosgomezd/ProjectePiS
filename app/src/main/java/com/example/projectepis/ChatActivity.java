@@ -59,13 +59,10 @@ public class ChatActivity extends AppCompatActivity {
         nombre = getIntent().getExtras().get("user_name").toString();
         apellido = getIntent().getExtras().get("user_apellido").toString();
         imagen = getIntent().getExtras().get("user_imagen").toString();
-
         IniciarLayout();
-
         nombreUsuario.setText(nombre);
         apellidoUsuario.setText(apellido);
         Picasso.get().load(imagen).placeholder(R.drawable.user).into(imagenUsuario);
-
         mensajeAdapter = new MensajeAdapter(mensajesList);
         recyclerView =(RecyclerView) findViewById(R.id.listamensajesrecycler);
         linearLayoutManager = new LinearLayoutManager(this);

@@ -18,6 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -51,7 +52,39 @@ public class InicioChatActivity extends AppCompatActivity {
         RootRef = FirebaseDatabase.getInstance().getReference().child("Grupos");
         mAuth = FirebaseAuth.getInstance();
         CurrentUserId = mAuth.getCurrentUser().getUid();
+
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            switch (item.getItemId()){
+                case R.id.calendario:
+                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
+                    //startActivity(intent);
+                    break;
+                case R.id.chat:
+                    //Intent intent = new Intent(InicioChatActivity.this, InicioChatActivity.class);
+                    //startActivity(intent);
+                    break;
+                case R.id.crear_evento:
+                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
+                    //startActivity(intent);
+                    break;
+                case R.id.evento_destacado:
+                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
+                    //startActivity(intent);
+                    break;
+                case R.id.perfil:
+                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
+                    //startActivity(intent);
+                    break;
+            }
+            return true;
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

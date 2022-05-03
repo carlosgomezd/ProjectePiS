@@ -50,28 +50,24 @@ public class VerAmigosActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        FirebaseRecyclerOptions options = new FirebaseRecyclerOptions.Builder<Contactos>()
+        FirebaseRecyclerOptions<Contactos> options = new FirebaseRecyclerOptions.Builder<Contactos>()
                 .setQuery(ContactosRef, Contactos.class).build();
         FirebaseRecyclerAdapter<Contactos, ContactosViewHolder> adapter= new FirebaseRecyclerAdapter<Contactos, ContactosViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ContactosViewHolder holder, int position, @NonNull Contactos model) {
                 String userIds = getRef(position).getKey();
-                ContactosRef.child(userIds).addValueEventListener(new ValueEventListener() {
+                UserRef.child(userIds).addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if(snapshot.hasChild("imagen")){
-                            String nombreUsuario = snapshot.child("nombre").getValue().toString();
-                            String apellidoUsuario = snapshot.child("apellido").getValue().toString();
                             String imagenUsuario = snapshot.child("imagen").getValue().toString();
-                            holder.nombre.setText(nombreUsuario);
-                            holder.apellido.setText(apellidoUsuario);
                             Picasso.get().load(imagenUsuario).placeholder(R.drawable.user).into(holder.imagen);
-                        }else{
+                        }
                             String nombreUsuario = snapshot.child("nombre").getValue().toString();
                             String apellidoUsuario = snapshot.child("apellido").getValue().toString();
                             holder.nombre.setText(nombreUsuario);
                             holder.apellido.setText(apellidoUsuario);
-                        }
+
                     }
 
                     @Override
