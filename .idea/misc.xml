@@ -41,6 +41,14 @@
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/menu/menus_opciones.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="app/src/main/res/layout/activity_grupo_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_inicio.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_perfil.xml" value="0.12771739130434784" />
+        <entry key="app/src/main/res/layout/activity_perfil_usuario.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/activity_registro.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_grupos.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/toolbar_principal.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.26851851851851855" />
       </map>
     </option>
   </component>

@@ -58,6 +58,7 @@ public class Inicio extends AppCompatActivity {
                     //startActivity(intent);
                     break;
                 case R.id.perfil:
+
                     //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
                     //startActivity(intent);
                     break;

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PerfilActivity">
+
+<include
+    android:id="@+id/toolbar_perfil"
+    layout = "@layout/toolbar_principal"></include>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/user_imagen_perfil"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/toolbar_perfil"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:src="drawable/welcome"
+        android:civ_border_color="@color/black"
+        app:civ_border_width = "2p"/>
+    <EditText
+        android:id="@+id/ciudad_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/user_imagen_perfil"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/recibir_mensaje"
+        android:padding="8dp"
+        android:hint="Mi Ciudad"/>
+
+    <EditText
+        android:id="@+id/edad_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/user_imagen_perfil"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/recibir_mensaje"
+        android:padding="8dp"
+        android:hint="Edad"/>
+
+    <EditText
+        android:id="@+id/género_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/user_imagen_perfil"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/recibir_mensaje"
+        android:padding="8dp"
+        android:hint="Género"/>
+    <EditText
+        android:id="@+id/estado_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/user_imagen_perfil"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/recibir_mensaje"
+        android:padding="8dp"
+        android:hint="Mi Estado"/>
+
+<Button
+    android:id="@+id/boton_perfil"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/estado_perfil"
+    android:layout_margin="20dp"
+    android:text="Actualizar información"
+    android:background="@drawable/recibir_mensaje"
+    android:textColor="#ffffff"/>
+
+
+
+</RelativeLayout>
