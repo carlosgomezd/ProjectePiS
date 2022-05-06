@@ -21,28 +21,30 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Registro extends AppCompatActivity {
-    EditText etDate;
-    EditText etName;
-    EditText etApellido;
-    EditText etEmail;
-    EditText etPassword;
-    EditText etBirthday;
-    EditText etGenero;
-    Button btRegistro;
+    private EditText etDate;
+    private EditText etName;
+    private EditText etApellido;
+    private EditText etEmail;
+    private EditText etPassword;
+    private EditText etBirthday;
+    private EditText etGenero;
+    private Button btRegistro;
 
     //Variables de datos que vamos a registrar
-    String name="";
-    String apellido="";
-    String email="";
-    String password="";
-    String birthday="";
-    String gen="";
+    private String name="";
+    private String apellido="";
+    private String email="";
+    private String password="";
+    private String birthday="";
+    private String gen="";
+    private String token;
 
     //Autentificacion y base de datos
     FirebaseAuth mAuth;
@@ -146,29 +148,42 @@ public class Registro extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
 
-                    Map<String , Object> map = new HashMap<>();
-                    map.put("nombre",name );
-                    map.put("apellido",apellido );
-                    map.put("email",email );
-                    map.put("password",password );
-                    map.put("genero",gen);
-                    map.put("birthday",birthday);
+                    String CurrentUserId=mAuth.getCurrentUser().getUid();
 
-                    String id = mAuth.getCurrentUser().getUid();
-
-
-                    mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
                         @Override
-                        public void onComplete(@NonNull Task<Void> task2) {
-                            if(task2.isSuccessful()){
+                        public void onComplete(@NonNull Task<String> task) {
+                            if (task.isSuccessful()){
+                                token = task.getResult();
+                                Map<String , Object> map = new HashMap<>();
+                                map.put("nombre",name );
+                                map.put("apellido",apellido );
+                                map.put("email",email );
+                                map.put("password",password );
+                                map.put("genero",gen);
+                                map.put("birthday",birthday);
+                                map.put("token",token);
 
-                                startActivity(new Intent(Registro.this,MainActivity.class));
-                                finish();
-                            }else{
-                                Toast.makeText(Registro.this, "No se pudo crear los datos correctamente", Toast.LENGTH_SHORT ).show();
+                                String id = mAuth.getCurrentUser().getUid();
+
+
+                                mDatabase.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                    @Override
+                                    public void onComplete(@NonNull Task<Void> task2) {
+                                        if(task2.isSuccessful()){
+
+                                            startActivity(new Intent(Registro.this,MainActivity.class));
+                                            finish();
+                                        }else{
+                                            Toast.makeText(Registro.this, "No se pudo crear los datos correctamente", Toast.LENGTH_SHORT ).show();
+                                        }
+                                    }
+                                });
                             }
                         }
                     });
+
+
 
                 }else{
                     Toast.makeText(Registro.this, "No se pudo registrar este usuario", Toast.LENGTH_SHORT ).show();
@@ -177,7 +192,5 @@ public class Registro extends AppCompatActivity {
         });
 
     }
-
-
 
 }

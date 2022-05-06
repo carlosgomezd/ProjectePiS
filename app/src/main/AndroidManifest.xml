@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.projectepis">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,18 +14,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectePiS">
         <activity
+            android:name=".Calendario"
+            android:exported="false" />
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".ResetPass"
             android:exported="false" />
         <activity
             android:name=".ChatActivity"
-            android:parentActivityName=".InicioChatActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".InicioChatActivity" />
         <activity
             android:name=".SolicitudesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".InicioChatActivity" />
         <activity
             android:name=".VerAmigosActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".InicioChatActivity" />
         <activity
             android:name=".PerfilUsuarioActivity"
             android:exported="false" />

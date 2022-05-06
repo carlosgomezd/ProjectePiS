@@ -15,19 +15,18 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.messaging.FirebaseMessaging;
 
 public class MainActivity extends AppCompatActivity {
-    FirebaseAuth mAuth;
+    private FirebaseAuth mAuth;
+    private EditText etEmail,etPassword;
+    private String email="";
+    private String password="";
+    private Button registrar,signIn,resetP;
+    private DatabaseReference UserRef;
 
-    EditText etEmail;
-    EditText etPassword;
-
-    String email="";
-    String password="";
-
-    Button registrar;
-    Button signIn;
-    Button resetP;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,9 +36,8 @@ public class MainActivity extends AppCompatActivity {
         registrar= (Button) findViewById(R.id.Registrar);
         resetP= (Button) findViewById(R.id.btRecuperacion);
 
-
         mAuth = FirebaseAuth.getInstance();
-
+        UserRef = FirebaseDatabase.getInstance().getReference().child("Users");
         FirebaseAuth auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
 
@@ -47,27 +45,20 @@ public class MainActivity extends AppCompatActivity {
             irinicio();
         }
 
-
         etEmail = (EditText) findViewById(R.id.TextEmail);
         etPassword = (EditText) findViewById(R.id.TextPassword);
-
 
         registrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent registrar = new Intent(MainActivity.this,Registro.class);
                 startActivity(registrar);
-
             }
         });
 
         signIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                //Intent signIn = new Intent(MainActivity.this, InicioChatActivity.class);
-                //startActivity(signIn);
                 email=etEmail.getText().toString();
                 password=etPassword.getText().toString();
                 if(email.isEmpty() || password.isEmpty()){
@@ -80,18 +71,13 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
 
                             irinicio();
-
                         }else{
-
                             Toast.makeText(MainActivity.this, "Email o password incorrecto", Toast.LENGTH_SHORT ).show();
-
                         }
                     }
                 });
-
             }
         });
-        
 
         resetP.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -101,17 +87,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
     }
     private void irinicio() {
-
         Intent i = new Intent(MainActivity.this,Inicio.class);
         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK );
         startActivity(i);
-
     }
-
-
-
 }

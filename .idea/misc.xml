@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/ic_persona.xml" value="0.1" />
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/icmail.xml" value="0.1" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_calendario.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio.xml" value="0.15081521739130435" />
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.1" />
@@ -22,6 +23,8 @@
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_buscar_amigos.xml" value="0.33" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_chat.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_grupo_chat.xml" value="0.33" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio_chat.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_perfil_usuario.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.36666666666666664" />
@@ -36,8 +39,24 @@
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/toolbar_principal.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/user_display_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/usuario_mensaje_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/menu/menus_opciones.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="app/src/main/res/layout/activity_agregar_evento_calendario.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_calendario.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_grupo_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_inicio.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_inicio_chat.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_perfil.xml" value="0.12771739130434784" />
+        <entry key="app/src/main/res/layout/activity_perfil_usuario.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/activity_registro.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_ver_eventos.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/dropdown_genero.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_chat.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/fragment_grupos.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_chat_bar.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/toolbar_principal.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.26851851851851855" />
       </map>
     </option>
   </component>

@@ -156,6 +156,58 @@ public class SolicitudesActivity extends AppCompatActivity {
 
                                     @Override
                                     public void onCancelled(@NonNull DatabaseError error) {}});
+                            }else if(tipo.equals("enviado")){
+                                Button solicitud_aceptar = holder.itemView.findViewById(R.id.user_solicitud_aceptar_boton);
+                                solicitud_aceptar.setText("ENVIADA");
+                                holder.itemView.findViewById(R.id.user_solicitud_cancelar_boton).setVisibility(View.GONE);
+
+                                UserRef.child(user_id).addValueEventListener(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                        if(snapshot.hasChild("imagen")){
+                                            String img = snapshot.child("imagen").getValue().toString();;
+                                            Picasso.get().load(img).placeholder(R.drawable.user).into(holder.images);
+                                        }
+                                        String nom = snapshot.child("nombre").getValue().toString();
+                                        String cogn = snapshot.child("apellido").getValue().toString();
+                                        holder.nombres.setText(nom);
+                                        holder.apellidos.setText(cogn);
+                                        holder.itemView.setOnClickListener(new View.OnClickListener() {
+                                            @Override
+                                            public void onClick(View view) {
+                                                CharSequence opciones[] = new CharSequence[]{
+                                                        "Aceptar",
+                                                        "Cancelar"
+                                                };
+                                                AlertDialog.Builder builder = new AlertDialog.Builder(SolicitudesActivity.this);
+                                                builder.setTitle("Quieres Cancelar la solicitud?");
+                                                builder.setItems(opciones, new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                                        if(i == 0){
+                                                            SolicitudesRef.child(CurrentUserId).child(user_id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                @Override
+                                                                public void onComplete(@NonNull Task<Void> task) {
+                                                                    if(task.isSuccessful()){
+                                                                        SolicitudesRef.child(user_id).child(CurrentUserId).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                                                                            @Override
+                                                                            public void onComplete(@NonNull Task<Void> task) {
+                                                                                Toast.makeText(SolicitudesActivity.this, "Cancelaste la solicitud", Toast.LENGTH_SHORT).show();
+                                                                            }
+                                                                        });
+                                                                    }
+                                                                }
+                                                            });
+                                                        }
+                                                    }
+                                                });
+                                                builder.show();
+                                            }
+                                        });
+                                    }
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError error) {}});
                             }
                         }
                     }

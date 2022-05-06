@@ -20,6 +20,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
+import java.util.HashMap;
+
 public class PerfilUsuarioActivity extends AppCompatActivity {
 
     private String usuario_recibido, CurrentEstado, CurrentUserId;
@@ -27,7 +29,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
     private ImageView usuario_imagen;
     private Button enviarMensaje, cancelarMensaje;
     private FirebaseAuth auth;
-    private DatabaseReference UserRef, SolicitudRef, ContactosRef;
+    private DatabaseReference UserRef, SolicitudRef, ContactosRef, NotificacionesRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +40,7 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
         ContactosRef = FirebaseDatabase.getInstance().getReference().child("Contactos");
         UserRef = FirebaseDatabase.getInstance().getReference().child("Users");
         SolicitudRef = FirebaseDatabase.getInstance().getReference().child("Solicitudes");
+        NotificacionesRef = FirebaseDatabase.getInstance().getReference().child("Notificaciones");
         auth = FirebaseAuth.getInstance();
         CurrentUserId = auth.getCurrentUser().getUid();
         usuarioNombre = (TextView) findViewById(R.id.usuario_vic_nombre);
@@ -245,9 +248,20 @@ public class PerfilUsuarioActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if(task.isSuccessful()){
-                                        enviarMensaje.setEnabled(true);
-                                        CurrentEstado="viejo";
-                                        enviarMensaje.setText("Cancelar Solicitud");
+
+                                        HashMap<String, String> chatNotificacion = new HashMap<>();
+                                        chatNotificacion.put("de", usuario_recibido);
+                                        chatNotificacion.put("tipo", "requerimiento");
+                                        NotificacionesRef.child(CurrentUserId).push().setValue(chatNotificacion).addOnCompleteListener(new OnCompleteListener<Void>() {
+                                            @Override
+                                            public void onComplete(@NonNull Task<Void> task) {
+                                                if (task.isSuccessful()){
+                                                    enviarMensaje.setEnabled(true);
+                                                    CurrentEstado="viejo";
+                                                    enviarMensaje.setText("Cancelar Solicitud");
+                                                }
+                                            }
+                                        });
                                     }
                                 }
                             });
