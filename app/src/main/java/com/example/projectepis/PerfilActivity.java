@@ -1,14 +1,23 @@
 package com.example.projectepis;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class PerfilActivity extends AppCompatActivity {
+import androidx.fragment.app.Fragment;
+
+/**
+ * A placeholder fragment containing a simple view.
+ */
+class MainActivityFragment extends Fragment {
+
+    public MainActivityFragment() {
+    }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_perfil);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_main, container, false);
     }
 }
