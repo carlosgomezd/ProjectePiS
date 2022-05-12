@@ -37,6 +37,7 @@ public class InicioChatActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inicio_chat);
+
         toolbar=(Toolbar)findViewById(R.id.app_main_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("AnyDay");
@@ -55,6 +56,7 @@ public class InicioChatActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+        bottomNav.setSelectedItemId(R.id.chat);
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -66,12 +68,12 @@ public class InicioChatActivity extends AppCompatActivity {
                     startActivity(intent);
                     break;
                 case R.id.crear_evento:
-                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
-                    //startActivity(intent);
+                    Intent intent2 = new Intent(InicioChatActivity.this, CrearEvento.class);
+                    startActivity(intent2);
                     break;
                 case R.id.evento_destacado:
-                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
-                    //startActivity(intent);
+                    Intent intent3 = new Intent(InicioChatActivity.this, EventoDestacado.class);
+                    startActivity(intent3);
                     break;
                 case R.id.perfil:
                     //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);

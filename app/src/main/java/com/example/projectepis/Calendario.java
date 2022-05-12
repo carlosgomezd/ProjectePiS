@@ -3,6 +3,7 @@ package com.example.projectepis;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -16,6 +17,8 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Calendario extends AppCompatActivity implements CalendarView.OnDateChangeListener {
     private CalendarView calendarView;
+    private Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,11 @@ public class Calendario extends AppCompatActivity implements CalendarView.OnDate
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+        bottomNav.setSelectedItemId(R.id.calendario);
+
+        toolbar=(Toolbar)findViewById(R.id.app_main_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Calendari");
 
         calendarView=(CalendarView) findViewById(R.id.calendarioView);
         calendarView.setOnDateChangeListener(this);
@@ -92,16 +100,16 @@ public class Calendario extends AppCompatActivity implements CalendarView.OnDate
                     startActivity(intent);
                     break;
                 case R.id.crear_evento:
-                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
-                    //startActivity(intent);
+                    Intent intent2 = new Intent(Calendario.this, CrearEvento.class);
+                    startActivity(intent2);
                     break;
                 case R.id.evento_destacado:
-                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
-                    //startActivity(intent);
+                    Intent intent3 = new Intent(Calendario.this, EventoDestacado.class);
+                    startActivity(intent3);
                     break;
                 case R.id.perfil:
-                    //Intent intent = new Intent(InicioChatActivity.this, CalendarioActivity.class);
-                    //startActivity(intent);
+                    //Intent intent4 = new Intent(Calendario.this, Perfil.class);
+                    //startActivity(intent4);
                     break;
             }
             return true;

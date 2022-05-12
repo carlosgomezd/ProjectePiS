@@ -19,6 +19,10 @@
         <activity
             android:name=".PerfilActivity"
             android:exported="false" />
+        <activity android:name=".CrearEvento"
+            android:exported="false"/>
+        <activity android:name=".EventoDestacado"
+            android:exported="false"/>
         <activity
             android:name=".ResetPass"
             android:exported="false" />
