@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/ic_persona.xml" value="0.1" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/icmail.xml" value="0.1" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio.xml" value="0.15081521739130435" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.1" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_reset_pass.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/34695/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/dropdown_genero.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/enviar_mensaje.xml" value="0.253" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_birthday.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_genero.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_lock.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/ic_persona.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/icmail.xml" value="0.354" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/drawable/recibir_mensaje.xml" value="0.253" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_buscar_amigos.xml" value="0.33" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_chat.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_grupo_chat.xml" value="0.33" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio_chat.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_perfil_usuario.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_soilicitudes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_solicitudes.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/activity_ver_amigos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/dropdown_genero.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/enviar_mensaje_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/fragment_chat.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/fragment_grupos.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/layout_chat_bar.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/toolbar_principal.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/user_display_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/layout/usuario_mensaje_layout.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/menu/bottom_menu.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/User/StudioProjects/ProjectePiS/app/src/main/res/menu/menus_opciones.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/ic_birthday.xml" value="0.1145" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/ic_genero.xml" value="0.1145" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1145" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_calendario.xml" value="0.2" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_chat.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_crear_evento.xml" value="0.176" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_evento_destacado.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio.xml" value="0.264" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_inicio_chat.xml" value="0.2" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_main.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_perfil.xml" value="0.152" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_perfil_usuario.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/activity_registro.xml" value="0.12158054711246201" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/fragment_chat.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/fragment_grupos.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/toolbar_calendari.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/toolbar_principal.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/user_display_layout.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/layout/usuario_mensaje_layout.xml" value="0.2418478260869565" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1715" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/mipmap-anydpi-v26/ic_launcher_logo.xml" value="0.1715" />
+        <entry key="..\:/Users/solra/AndroidStudioProjects/ProjectePiS/app/src/main/res/mipmap-anydpi-v26/ic_launcher_logo_round.xml" value="0.1715" />
+        <entry key="app/src/main/res/layout/activity_grupo_chat.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_inicio.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_perfil.xml" value="0.12771739130434784" />
+        <entry key="app/src/main/res/layout/activity_perfil_usuario.xml" value="0.17325227963525835" />
+        <entry key="app/src/main/res/layout/activity_registro.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_grupos.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/toolbar_principal.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.26851851851851855" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
